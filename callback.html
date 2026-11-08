@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Connexion TikTok — Clip Vertical</title>
+<style>body{margin:0;background:#121216;color:#ecebe7;font:16px/1.6 system-ui,"Segoe UI",sans-serif;display:grid;place-items:center;min-height:100vh;text-align:center}a{color:#ff7a7a}</style></head>
+<body><main><p>Connexion TikTok réussie, retour vers Clip Vertical…</p>
+<p id="m" style="color:#85858f;font-size:14px"></p></main>
+<script>
+// TikTok refuse les adresses locales : il revient ici, et cette page renvoie le code au site sur ton PC.
+var dst = 'http://127.0.0.1:8765/tiktok/callback' + location.search;
+document.getElementById('m').innerHTML = 'Si rien ne se passe, vérifie que le site est lancé (lancer.bat), puis <a href="' + dst.replace(/"/g, '%22') + '">clique ici</a>.';
+location.replace(dst);
+</script></body></html>
